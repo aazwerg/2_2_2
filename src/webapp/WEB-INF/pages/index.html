@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="html">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Index</title>
 </head>
 <body>
 <div>
-    <table>
-        <tr:block tr:each="msg : ${messages}">
-            <h1 tr:text="${msg}"></h1>
-        </tr:block>
-    </table>
+    <th:block th:each="msg : ${messages}">
+        <h1 th:text="${msg}"></h1>
+    </th:block>
 </div>
+<a href="cars?count=1">Let's count cars!</a>
 </body>
 </html>

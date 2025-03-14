@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="html">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th><h2>#</h2></th>
+            <th><h2>Series</h2></th>
+            <th><h2>Model</h2></th>
+            <th><h2>Color</h2></th>
+        </tr>
+        <th:block th:each="car : ${cars}">
+            <tr>
+                <td><h3 th:text="${carStat.count}"></h3></td>
+                <td><h3 th:text="${car.series}"></h3></td>
+                <td><h3 th:text="${car.model}"></h3></td>
+                <td><h3 th:text="${car.color}"></h3></td>
+            </tr>
+        </th:block>
+    </table>
+    <form action="/Spring_MVC/cars">
+        <label for="count">Number of cars to show:</label>
+        <input type="number" id="count" name="count" value="1">
+        <input type="submit">
+    </form>
+</div>
+</body>
+</html>
